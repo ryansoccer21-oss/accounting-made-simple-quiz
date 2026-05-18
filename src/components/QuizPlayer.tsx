@@ -102,7 +102,7 @@ export default function QuizPlayer({ quiz, backToQuizListHref }: QuizPlayerProps
             href="/#tutoring"
             className="mt-4 inline-flex rounded-md bg-navy px-5 py-3 text-sm font-bold text-white transition hover:bg-ink"
           >
-            View Tutoring Next Step
+            See Tutoring Options
           </Link>
         </div>
 

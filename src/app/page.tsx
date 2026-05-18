@@ -134,14 +134,12 @@ export default function HomePage() {
               <p className="mt-3 leading-7 text-slate-700">
                 Sessions are beginner-friendly, affordable, and focused on helping students understand each topic step by step.
               </p>
-              <button
-                type="button"
-                disabled
-                className="mt-6 cursor-not-allowed rounded-md bg-slate-200 px-5 py-3 text-sm font-bold text-slate-600"
-              >
-                Booking coming soon
-              </button>
-              <p className="mt-3 text-sm text-slate-600">No booking software or payment processing is connected yet.</p>
+              <div className="mt-6 rounded-md border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-bold text-slate-700">
+                Booking details coming soon
+              </div>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                For now, students can use the quiz center to practice and identify topics they want help reviewing.
+              </p>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
