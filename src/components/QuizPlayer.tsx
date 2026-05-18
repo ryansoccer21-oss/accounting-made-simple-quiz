@@ -5,6 +5,10 @@ import { useMemo, useState } from "react";
 import type { Quiz, QuizQuestion } from "@/data/quizzes";
 import { getAnswerText } from "@/lib/quiz-utils";
 
+const mainWebsiteUrl = "https://accounting-made-simple.vercel.app";
+const bookingUrl =
+  "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1RoutP_89pDYhgCMsRfwtFvKuJOYNFjswxPCn4wQ0Difq4JjPeJTgTGbC3zr06wktNsCeti3rt";
+
 type QuizPlayerProps = {
   quiz: Quiz;
   backToQuizListHref?: string;
@@ -98,12 +102,14 @@ export default function QuizPlayer({ quiz, backToQuizListHref }: QuizPlayerProps
           <p className="mt-2 text-sm leading-6 text-slate-700">
             Accounting Made Simple can walk through the topic step by step so the rules, formulas, and examples feel easier to use.
           </p>
-          <Link
-            href="/#tutoring"
+          <a
+            href={bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-4 inline-flex rounded-md bg-navy px-5 py-3 text-sm font-bold text-white transition hover:bg-ink"
           >
-            See Tutoring Options
-          </Link>
+            Book a Tutoring Session
+          </a>
         </div>
 
         <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -128,6 +134,14 @@ export default function QuizPlayer({ quiz, backToQuizListHref }: QuizPlayerProps
           >
             Back to Categories
           </Link>
+          <a
+            href={mainWebsiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-md border border-slate-300 bg-white px-5 py-3 text-center text-sm font-bold text-slate-800 transition hover:border-mint hover:text-navy"
+          >
+            Visit Accounting Made Simple
+          </a>
         </div>
       </section>
     );

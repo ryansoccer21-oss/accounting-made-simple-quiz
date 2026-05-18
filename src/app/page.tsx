@@ -2,6 +2,10 @@ import Link from "next/link";
 import { categories, quizzes } from "@/data/quizzes";
 
 const totalQuestions = quizzes.reduce((sum, quiz) => sum + quiz.questions.length, 0);
+const mainWebsiteUrl = "https://accounting-made-simple.vercel.app";
+const bookingUrl =
+  "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1RoutP_89pDYhgCMsRfwtFvKuJOYNFjswxPCn4wQ0Difq4JjPeJTgTGbC3zr06wktNsCeti3rt";
+
 const services = [
   "Financial Accounting",
   "Managerial Accounting",
@@ -48,6 +52,14 @@ export default function HomePage() {
               className="rounded-md border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-800 transition hover:border-mint hover:text-navy"
             >
               Browse Categories
+            </a>
+            <a
+              href={mainWebsiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-md border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-800 transition hover:border-mint hover:text-navy"
+            >
+              Visit Main Website
             </a>
           </div>
           <div className="mt-8 grid max-w-xl gap-3 sm:grid-cols-3">
@@ -134,12 +146,14 @@ export default function HomePage() {
               <p className="mt-3 leading-7 text-slate-700">
                 Sessions are beginner-friendly, affordable, and focused on helping students understand each topic step by step.
               </p>
-              <div className="mt-6 rounded-md border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-bold text-slate-700">
-                Booking details coming soon
-              </div>
-              <p className="mt-3 text-sm leading-6 text-slate-600">
-                For now, students can use the quiz center to practice and identify topics they want help reviewing.
-              </p>
+              <a
+                href={bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex rounded-md bg-navy px-5 py-3 text-sm font-bold text-white transition hover:bg-ink"
+              >
+                Book a Free First Session
+              </a>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
