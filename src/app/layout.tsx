@@ -15,9 +15,6 @@ export const metadata: Metadata = {
     template: "%s | Accounting Made Simple Quiz Center"
   },
   description: siteDescription,
-  alternates: {
-    canonical: "/"
-  },
   openGraph: {
     title: "Accounting Made Simple Quiz Center",
     description: siteDescription,
