@@ -383,5 +383,124 @@ export const quizzes: Quiz[] = [
       q("afe-006", "Actual expense is in B2 and budgeted expense is in C2. Which variance formula shows positive when actual is over budget?", ["=C2-B2", "=B2-C2", "=B2/C2", "=SUM(B2:C2)"], "B", "Actual minus budget gives a positive variance when actual expense is higher."),
       q("afe-007", "A formula returns #DIV/0! in a cost-per-unit schedule. What is the most likely cause?", ["The formula is dividing by zero or a blank cell", "The formula has too many decimal places", "The cell is formatted as currency", "The formula uses SUM"], "A", "#DIV/0! appears when Excel divides by zero or an empty denominator cell.")
     ]
+  },
+  {
+    id: "bank-reconciliations",
+    title: "Bank Reconciliations",
+    category: "Financial Accounting",
+    topic: "Bank Reconciliations",
+    description: "Practice deposits in transit, outstanding checks, bank charges, NSF checks, interest, and corrected cash balances.",
+    difficulty: "Intermediate",
+    questions: [
+      q("br-001", "The bank statement shows $13,800. Deposits in transit are $1,500 and outstanding checks are $2,200. What is the adjusted bank balance?", ["$11,600", "$13,100", "$15,300", "$17,500"], "B", "Add deposits in transit and subtract outstanding checks: $13,800 + $1,500 - $2,200 = $13,100."),
+      q("br-002", "A $35 bank service charge appears on the bank statement but is not in the books. What book entry is needed?", ["Debit Cash $35; Credit Bank Fee Expense $35", "Debit Bank Fee Expense $35; Credit Cash $35", "Debit Accounts Receivable $35; Credit Cash $35", "Debit Cash $35; Credit Interest Revenue $35"], "B", "A service charge reduces the book cash balance and records an expense."),
+      q("br-003", "A customer's $600 check was returned NSF by the bank. What adjustment should the company record?", ["Debit Accounts Receivable $600; Credit Cash $600", "Debit Cash $600; Credit Accounts Receivable $600", "Debit Bad Debt Expense $600; Credit Cash $600", "Debit Cash $600; Credit Service Revenue $600"], "A", "An NSF check puts the customer's receivable back on the books and reduces cash."),
+      q("br-004", "The bank collected $24 of interest for the company. The company has not recorded it. What is the correct adjustment?", ["Debit Interest Expense $24; Credit Cash $24", "Debit Cash $24; Credit Interest Revenue $24", "Debit Accounts Payable $24; Credit Cash $24", "Debit Cash $24; Credit Accounts Receivable $24"], "B", "Interest earned increases cash and interest revenue."),
+      q("br-005", "The book cash balance is $9,850. The bank statement shows a $40 service charge, a $320 NSF check, and $25 interest earned. What is the adjusted book balance?", ["$9,465", "$9,515", "$10,135", "$10,235"], "B", "Adjust book cash: $9,850 - $40 - $320 + $25 = $9,515."),
+      q("br-006", "Which item is normally subtracted from the bank statement balance during a bank reconciliation?", ["Deposit in transit", "Outstanding check", "Interest earned by bank", "Book error that understated cash"], "B", "Outstanding checks have been recorded by the company but not yet cleared by the bank."),
+      q("br-007", "After reconciling, the adjusted bank balance is $8,420 and the adjusted book balance is $8,420. What should the corrected cash balance be?", ["$0", "$8,420", "The original book balance", "The original bank balance"], "B", "When both sides reconcile, the shared adjusted amount is the corrected cash balance.")
+    ]
+  },
+  {
+    id: "receivables-and-bad-debt",
+    title: "Receivables and Bad Debt",
+    category: "Financial Accounting",
+    topic: "Receivables and Bad Debt",
+    description: "Review allowance method entries, write-offs, recoveries, net realizable value, and aging estimates.",
+    difficulty: "Intermediate",
+    questions: [
+      q("rbd-001", "Why does the allowance method estimate bad debts before specific customers are known to be uncollectible?", ["To match bad debt expense with the related credit sales period", "To avoid recording accounts receivable", "To increase cash before collection", "To replace all write-off entries"], "A", "The allowance method matches estimated bad debt expense with the period of related sales."),
+      q("rbd-002", "Under the direct write-off method, a $450 account is determined to be uncollectible. What entry is recorded?", ["Debit Allowance for Doubtful Accounts $450; Credit Accounts Receivable $450", "Debit Bad Debt Expense $450; Credit Accounts Receivable $450", "Debit Accounts Receivable $450; Credit Bad Debt Expense $450", "Debit Cash $450; Credit Accounts Receivable $450"], "B", "Direct write-off records bad debt expense only when a specific account is written off."),
+      q("rbd-003", "Allowance for Doubtful Accounts has a $900 credit balance. The desired ending allowance is $2,500. What bad debt expense is needed?", ["$900", "$1,600", "$2,500", "$3,400"], "B", "The adjustment must increase the allowance from $900 to $2,500, so expense is $1,600."),
+      q("rbd-004", "Under the allowance method, a $700 account is written off. What is the effect on net accounts receivable?", ["Net accounts receivable decreases by $700", "Net accounts receivable increases by $700", "Net accounts receivable does not change", "Bad debt expense increases by $700"], "C", "The write-off reduces both Accounts Receivable and the Allowance, so net receivables do not change."),
+      q("rbd-005", "A company recovers $300 from a customer whose account had been written off. What is the usual first step?", ["Debit Accounts Receivable $300; Credit Allowance for Doubtful Accounts $300", "Debit Cash $300; Credit Bad Debt Expense $300", "Debit Allowance for Doubtful Accounts $300; Credit Cash $300", "Debit Bad Debt Expense $300; Credit Accounts Receivable $300"], "A", "Recovery first reinstates the receivable, then the cash collection is recorded."),
+      q("rbd-006", "Accounts Receivable is $50,000 and Allowance for Doubtful Accounts has a $3,200 credit balance. What is net realizable value?", ["$3,200", "$46,800", "$50,000", "$53,200"], "B", "Net realizable value is receivables minus the allowance: $50,000 - $3,200 = $46,800."),
+      q("rbd-007", "An aging schedule estimates the allowance should be $4,800. The allowance account currently has a $600 debit balance. What bad debt expense is required?", ["$4,200", "$4,800", "$5,400", "$600"], "C", "A debit balance must be offset and then built to $4,800, so expense is $5,400.")
+    ]
+  },
+  {
+    id: "bonds-payable-basics",
+    title: "Bonds Payable Basics",
+    category: "Financial Accounting",
+    topic: "Bonds Payable Basics",
+    description: "Practice face value, stated and market rates, premiums, discounts, interest expense, and carrying value.",
+    difficulty: "Intermediate",
+    questions: [
+      q("bpb-001", "What does the face value of a bond represent?", ["The amount repaid at maturity", "The amount of interest paid each month", "The market price on every interest date", "The premium recorded at issue"], "A", "Face value is the principal amount the issuer repays at maturity."),
+      q("bpb-002", "A $100,000 bond has a 6% stated annual interest rate and pays interest semiannually. What cash interest is paid every six months?", ["$3,000", "$6,000", "$50,000", "$106,000"], "A", "Cash interest is $100,000 x 6% x 6/12 = $3,000."),
+      q("bpb-003", "A bond is most likely issued at a premium when which condition exists?", ["Stated rate is lower than the market rate", "Stated rate equals the market rate", "Stated rate is higher than the market rate", "Face value is lower than maturity value"], "C", "Investors pay a premium when the bond's stated rate is higher than the market rate."),
+      q("bpb-004", "A bond is issued at 98. If face value is $50,000, how much cash is received at issue?", ["$48,000", "$49,000", "$50,000", "$51,000"], "B", "A price of 98 means 98% of face value: $50,000 x 0.98 = $49,000."),
+      q("bpb-005", "When a bond is issued at a discount, what happens to carrying value as the discount is amortized?", ["It increases toward face value", "It decreases away from face value", "It stays equal to cash interest", "It immediately becomes zero"], "A", "Discount amortization increases carrying value toward the amount due at maturity."),
+      q("bpb-006", "Under the effective-interest method, interest expense is based on which amount?", ["Face value times stated rate only", "Carrying value times market rate", "Cash paid times stated rate", "Premium divided by face value"], "B", "Effective interest expense uses the carrying value and market rate."),
+      q("bpb-007", "A $80,000 bond is issued at 103. What is the bond premium at issue?", ["$2,400", "$3,000", "$80,000", "$82,400"], "A", "Cash received is $82,400, so the premium is $82,400 - $80,000 = $2,400.")
+    ]
+  },
+  {
+    id: "statement-of-cash-flows",
+    title: "Statement of Cash Flows",
+    category: "Financial Accounting",
+    topic: "Statement of Cash Flows",
+    description: "Classify cash flows and practice indirect method adjustments for operating cash flow.",
+    difficulty: "Advanced",
+    questions: [
+      q("scf-001", "Cash received from customers for services is classified as which activity?", ["Operating activity", "Investing activity", "Financing activity", "Noncash investing activity"], "A", "Cash from customers comes from normal operations."),
+      q("scf-002", "A company pays $18,000 cash to buy equipment. How is this reported on the statement of cash flows?", ["Operating cash outflow", "Investing cash outflow", "Financing cash outflow", "Added back to net income"], "B", "Cash paid for long-term assets is an investing outflow."),
+      q("scf-003", "A company issues common stock for $25,000 cash. Which section reports this transaction?", ["Operating activities", "Investing activities", "Financing activities", "Noncash activities only"], "C", "Issuing stock raises capital, so it is a financing cash inflow."),
+      q("scf-004", "Under the indirect method, operating cash flow starts with what amount?", ["Cash balance", "Net income", "Total assets", "Sales revenue"], "B", "The indirect method begins with net income and adjusts to cash from operations."),
+      q("scf-005", "Why is depreciation expense added back to net income under the indirect method?", ["It reduced net income but did not use cash", "It is an investing cash inflow", "It increases accounts receivable", "It is paid to bondholders"], "A", "Depreciation is a noncash expense, so it is added back."),
+      q("scf-006", "Accounts Receivable increased by $1,200 during the year. Under the indirect method, what is the adjustment to net income?", ["Add $1,200", "Subtract $1,200", "No adjustment", "Report as financing activity"], "B", "An increase in receivables means some revenue was not collected in cash, so subtract it."),
+      q("scf-007", "A company buys equipment by signing a long-term note payable. How should this be handled on the statement of cash flows?", ["As an operating cash outflow", "As an investing cash outflow", "As a financing cash inflow", "Disclosed as a noncash investing and financing activity"], "D", "No cash changed hands, so it is disclosed as a noncash investing and financing activity.")
+    ]
+  },
+  {
+    id: "budgeting-and-variance-analysis",
+    title: "Budgeting and Variance Analysis",
+    category: "Managerial Accounting",
+    topic: "Budgeting and Variance Analysis",
+    description: "Practice static budgets, flexible budgets, favorable and unfavorable variances, and basic cost variances.",
+    difficulty: "Advanced",
+    questions: [
+      q("bva-001", "A static budget was prepared for 5,000 units, but actual production was 5,600 units. What is the main limitation of comparing actual results to the static budget?", ["It ignores the change in activity level", "It always removes all fixed costs", "It uses actual prices only", "It cannot include revenue"], "A", "A static budget is based on the original planned activity level."),
+      q("bva-002", "What does a flexible budget do?", ["Adjusts budgeted amounts to the actual activity level", "Uses only last year's actual results", "Ignores variable costs", "Records journal entries for cash"], "A", "A flexible budget updates budgeted amounts for the actual volume of activity."),
+      q("bva-003", "Actual expense is $7,800 and flexible budget expense is $8,300. How is the variance described?", ["$500 favorable", "$500 unfavorable", "$8,300 favorable", "$16,100 unfavorable"], "A", "Actual expense is lower than budgeted expense, which is favorable."),
+      q("bva-004", "Budgeted sales were 10,000 units, but actual sales were 11,200 units. Which variance concept focuses on the impact of selling more units than planned?", ["Sales volume variance", "Direct materials price variance", "Labor rate variance", "Overhead spending variance"], "A", "Sales volume variance isolates the effect of actual units differing from budgeted units."),
+      q("bva-005", "A company used 1,000 pounds of material. Standard price is $5.00 per pound, but actual price is $5.20. What is the direct materials price variance?", ["$200 favorable", "$200 unfavorable", "$5,000 unfavorable", "$5,200 favorable"], "B", "($5.20 - $5.00) x 1,000 = $200 unfavorable."),
+      q("bva-006", "Standard materials allowed are 2,000 pounds at $4 per pound. Actual quantity used is 2,100 pounds. What is the materials quantity variance?", ["$100 unfavorable", "$400 unfavorable", "$400 favorable", "$8,400 unfavorable"], "B", "(2,100 - 2,000) x $4 = $400 unfavorable."),
+      q("bva-007", "Actual labor hours are 500, actual rate is $22, and standard rate is $20. What is the labor rate variance?", ["$1,000 unfavorable", "$1,000 favorable", "$10,000 unfavorable", "$11,000 favorable"], "A", "($22 - $20) x 500 = $1,000 unfavorable.")
+    ]
+  },
+  {
+    id: "job-order-costing",
+    title: "Job Order Costing",
+    category: "Managerial Accounting",
+    topic: "Job Order Costing",
+    description: "Review job cost sheets, direct costs, overhead rates, applied overhead, and overhead adjustments.",
+    difficulty: "Intermediate",
+    questions: [
+      q("joc-001", "What is the main purpose of a job cost sheet?", ["To track costs assigned to a specific job", "To reconcile the bank account", "To calculate bond interest", "To close revenue accounts"], "A", "A job cost sheet accumulates direct materials, direct labor, and overhead for one job."),
+      q("joc-002", "A factory issues $1,400 of direct materials to Job 27. What account is usually debited?", ["Raw Materials Inventory", "Work in Process Inventory", "Finished Goods Inventory", "Manufacturing Overhead"], "B", "Direct materials used on a job are charged to Work in Process."),
+      q("joc-003", "Employees work 30 direct labor hours on Job 14 at $18 per hour. What cost is added to the job?", ["$48", "$540", "$600", "$1,800"], "B", "Direct labor cost is 30 x $18 = $540."),
+      q("joc-004", "Estimated manufacturing overhead is $120,000 and estimated machine hours are 20,000. What is the predetermined overhead rate?", ["$4 per machine hour", "$6 per machine hour", "$20 per machine hour", "$120,000 per job"], "B", "$120,000 / 20,000 machine hours = $6 per machine hour."),
+      q("joc-005", "A job uses 350 machine hours and the overhead rate is $6 per machine hour. How much overhead is applied?", ["$350", "$2,100", "$6,000", "$21,000"], "B", "Applied overhead is 350 x $6 = $2,100."),
+      q("joc-006", "Actual overhead is $52,000 and applied overhead is $48,000. What is the overhead status before adjustment?", ["$4,000 underapplied", "$4,000 overapplied", "$100,000 overapplied", "No adjustment needed"], "A", "Applied overhead is less than actual overhead, so overhead is underapplied by $4,000."),
+      q("joc-007", "Applied overhead is greater than actual overhead. What does that mean?", ["Overhead is overapplied", "Overhead is underapplied", "Direct materials were unpaid", "Finished goods must be zero"], "A", "Overapplied overhead means more overhead was assigned to jobs than was actually incurred.")
+    ]
+  },
+  {
+    id: "lookup-if-and-error-checks",
+    title: "Lookup, IF, and Error Checks",
+    category: "Excel Basics",
+    topic: "Lookup, IF, and Error Checks",
+    description: "Practice lookup formulas, IF logic, IFERROR, SUMIF, absolute references, conditional formatting, and common formula errors.",
+    difficulty: "Advanced",
+    questions: [
+      q("xle-001", "Cell A2 contains an account number. Which formula looks up A2 in F2:F10 and returns the matching name from G2:G10?", ["=XLOOKUP(A2,$F$2:$F$10,$G$2:$G$10)", "=XLOOKUP($F$2:$F$10,A2,$G$2:$G$10)", "=SUMIF(A2,$F$2:$F$10,$G$2:$G$10)", "=IFERROR(A2,$G$2:$G$10)"], "A", "XLOOKUP uses lookup value, lookup array, then return array."),
+      q("xle-002", "Which VLOOKUP formula uses an exact match for the value in A2 against the first column of F2:H20 and returns column 3?", ["=VLOOKUP(A2,$F$2:$H$20,3,FALSE)", "=VLOOKUP(A2,$F$2:$H$20,3,TRUE)", "=VLOOKUP($F$2:$H$20,A2,3,FALSE)", "=VLOOKUP(A2,$F$2:$H$20,FALSE,3)"], "A", "FALSE requests an exact match in VLOOKUP."),
+      q("xle-003", "Actual spending is in B2 and budget is in C2. Which formula returns Over budget when actual is greater than budget?", ["=IF(B2>C2,\"Over budget\",\"OK\")", "=IF(C2>B2,\"Over budget\",\"OK\")", "=SUMIF(B2>C2,\"Over budget\")", "=IFERROR(B2>C2)"], "A", "The logical test should check whether actual spending is greater than budget."),
+      q("xle-004", "Which formula returns 0 instead of an error when B2 divided by C2 creates an error?", ["=IFERROR(B2/C2,0)", "=IF(B2/C2,ERROR,0)", "=SUMIF(B2/C2,0)", "=XLOOKUP(B2/C2,0)"], "A", "IFERROR returns the second argument when the first argument produces an error."),
+      q("xle-005", "Column A contains account names and column B contains amounts. Which formula totals amounts where the account name is Rent?", ["=SUMIF(A:A,\"Rent\",B:B)", "=COUNTIF(A:A,\"Rent\",B:B)", "=SUM(B:B,\"Rent\")", "=IF(A:A=\"Rent\",SUM(B:B))"], "A", "SUMIF uses range, criteria, then sum range."),
+      q("xle-006", "A tax rate is stored in F1. Which reference should be used so formulas copied across rows and columns always use F1?", ["F1", "$F$1", "$F1", "F$1"], "B", "$F$1 locks both the column and row."),
+      q("xle-007", "A conditional formatting rule should flag rows where actual cost in column B is greater than budget in column C. Which formula is best for row 2?", ["=$B2>$C2", "=B$2>C$2", "=$C2>$B2", "=IFERROR($B2,$C2)"], "A", "Locking columns B and C while leaving the row relative lets the rule test each row correctly.")
+    ]
   }
 ];
