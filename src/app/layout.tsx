@@ -6,6 +6,7 @@ import "./globals.css";
 const siteUrl = "https://accounting-made-simple-quiz.vercel.app";
 const siteDescription =
   "Free accounting, Excel, bookkeeping, and personal finance quizzes with instant feedback and short explanations.";
+const mainWebsiteUrl = "https://accounting-made-simple.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -66,9 +67,26 @@ export default function RootLayout({
         </header>
         {children}
         <footer className="border-t border-slate-200 bg-white">
-          <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-            <p className="font-semibold text-navy">Accounting Made Simple</p>
-            <p>Affordable accounting, Excel, and finance tutoring made simple.</p>
+          <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-sm text-slate-600 sm:px-6 lg:px-8">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <p className="font-semibold text-navy">Accounting Made Simple</p>
+              <div className="flex flex-wrap gap-4 font-semibold">
+                <a
+                  href={mainWebsiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-700 transition hover:text-navy"
+                >
+                  Main Website
+                </a>
+                <Link href="/#categories" className="text-slate-700 transition hover:text-navy">
+                  Quiz Categories
+                </Link>
+              </div>
+            </div>
+            <p className="max-w-4xl leading-6">
+              These quizzes are for educational practice only and are not financial, tax, legal, or professional accounting advice.
+            </p>
           </div>
         </footer>
       </body>
