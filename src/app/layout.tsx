@@ -3,9 +3,33 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import "./globals.css";
 
+const siteUrl = "https://accounting-made-simple-quiz.vercel.app";
+const siteDescription =
+  "Free accounting, Excel, bookkeeping, and personal finance quizzes with instant feedback and short explanations.";
+
 export const metadata: Metadata = {
-  title: "Accounting Made Simple Quiz Center",
-  description: "Beginner-friendly accounting, Excel, and personal finance quizzes for tutoring students."
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Accounting Made Simple Quiz Center",
+    template: "%s | Accounting Made Simple Quiz Center"
+  },
+  description: siteDescription,
+  alternates: {
+    canonical: "/"
+  },
+  openGraph: {
+    title: "Accounting Made Simple Quiz Center",
+    description: siteDescription,
+    url: siteUrl,
+    siteName: "Accounting Made Simple Quiz Center",
+    type: "website",
+    locale: "en_US"
+  },
+  twitter: {
+    card: "summary",
+    title: "Accounting Made Simple Quiz Center",
+    description: siteDescription
+  }
 };
 
 export default function RootLayout({
